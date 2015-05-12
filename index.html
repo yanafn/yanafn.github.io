@@ -1,15 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!doctype html>
 <html>
-<head>
-<title>you are not a fucking ninja</title>
-</head>
-<body style="background-color: black; color: white">
-<h1 id="you-are-not-a-fucking-ninja">you are not a fucking ninja</h1>
-<p>knock it off, all of you</p>
-<p>seriously, what the fuck</p>
-<p>were you a mercenary in feudal japan?</p>
-<p>no?</p>
-<p><strong>then you are not a fucking ninja</strong></p>
-<p>now please shut the fuck up about ninjas</p>
-</body>
+  <head>
+    <title>Are You A Fucking Ninja?</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.3.4/cyborg/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="ninja.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron" id="jumbotron-question">
+        <h1>Are You A Fucking Ninja?</h1>
+        <p class="lead">Find out whether you are a fucking ninja by answering this one weird fucking question.</p>
+        <p class="lead">Were you a fucking mercenary in feudal fucking Japan?</p>
+        <p>
+          <a class="btn btn-lg btn-success" href="#" id="button-yes">Yes</a>
+          <a class="btn btn-danger btn-lg" href="#" id="button-no">No</a>
+        </p>
+      </div>
+
+      <div class="jumbotron" style="display: none" id="jumbotron-yes">
+        <p class="lead">No, you fucking were <strong>not</strong> a fucking mercenary in feudal fucking Japan.</p>
+        <h1>You Are Not A Fucking Ninja</h1>
+      </div>
+
+      <div class="jumbotron" style="display: none" id="jumbotron-no">
+        <p class="lead">Quite right.</p>
+        <h1>You Are Not A Fucking Ninja</h1>
+      </div>
+    </div>
+    <!-- /container -->
+  </body>
+
 </html>
