@@ -15,4 +15,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-slim'
   grunt.loadNpmTasks 'grunt-divshot'
-  grunt.registerTask 'default', [ 'coffee', 'slim' ]
+  grunt.registerTask 'default', [ 'coffee', 'slim', 'divshot:push:production' ]
