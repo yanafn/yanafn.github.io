@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Are You A Fucking Ninja?</title>
-  <meta charset="utf-8">
-  <meta content="width=device-width" name="viewport">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
-</head>
-
-<body>
-  <div class="container">
-    <div class="jumbotron" id="jumbotron-question">
-      <h1>Are You A Fucking Ninja?</h1>
-      <p class="lead">Find out whether you are a fucking ninja by answering this one weird fucking question.</p>
-      <p class="lead">Were you a fucking mercenary in feudal fucking Japan?</p>
-      <p>
-        <a class="btn btn-lg btn-success" href="#" id="button-yes">Yes</a>
-        <a class="btn btn-danger btn-lg" href="#" id="button-no">No</a>
-      </p>
+  <head>
+    <title>Are You A Fucking Ninja?</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron" id="jumbotron-question">
+        <h1>Are You A Fucking Ninja?</h1>
+        <p class="lead">Find out whether you are a fucking ninja by answering this one weird fucking question.</p>
+        <p class="lead">Were you a fucking mercenary in feudal fucking Japan?</p>
+        <p>
+          <a class="btn btn-lg btn-success" href="#" id="button-yes">Yes</a>
+          <a class="btn btn-danger btn-lg" href="#" id="button-no">No</a>
+        </p>
+      </div>
+      <div class="jumbotron" id="jumbotron-yes" style="display: none">
+        <p class="lead">No, you fucking were not a fucking mercenary in feudal fucking Japan.</p>
+        <h1>You Are Not A Fucking Ninja</h1>
+      </div>
+      <div class="jumbotron" id="jumbotron-no" style="display: none">
+        <p class="lead">Quite right.</p>
+        <h1>You Are Not A Fucking Ninja</h1>
+      </div>
     </div>
-    <div class="jumbotron" id="jumbotron-yes" style="display: none">
-      <p class="lead">No, you fucking were not a fucking mercenary in feudal fucking Japan.</p>
-      <h1>You Are Not A Fucking Ninja</h1>
-    </div>
-    <div class="jumbotron" id="jumbotron-no" style="display: none">
-      <p class="lead">Quite right.</p>
-      <h1>You Are Not A Fucking Ninja</h1>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="ninja.js" type="text/javascript"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a#button-yes').click(function (event) {
+          $('div#jumbotron-question').hide()
+          $('div#jumbotron-yes').show()
+        })
+        $('a#button-no').click(function (event) {
+          $('div#jumbotron-question').hide()
+          $('div#jumbotron-no').show()
+        })
+      })
+    </script>
+  </body>
 </html>
